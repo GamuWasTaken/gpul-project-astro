@@ -1,0 +1,104 @@
+---
+const boardMembers = [
+  {
+    name: 'Jorge Teixeira',
+    role: 'Presidente',
+    gh: 'https://github.com/jorgeteixe',
+  },
+  {
+    name: 'David Maseda',
+    role: 'Vicepresidente',
+    gh: 'https://github.com/wizenink',
+  },
+  {
+    name: 'Álvaro Freire',
+    role: 'Tesoureiro',
+    gh: 'https://github.com/alvaro-freire',
+  },
+  {
+    name: 'Paula Taibo',
+    role: 'Secretaria',
+    gh: 'https://github.com/PT-15',
+  },
+  {
+    name: 'Siyuan He',
+    role: 'Vogal',
+    gh: 'https://github.com/siyunesweek',
+  },
+  {
+    name: 'Bruno Cabado',
+    role: 'Vogal',
+    gh: 'https://github.com/Kr4is',
+  },
+  {
+    name: 'Pedro Costal',
+    role: 'Vogal',
+    gh: 'https://github.com/pedrety',
+  }
+];
+
+
+---
+<section>
+  <h2>Xunta Directiva</h2>
+  {
+    boardMembers.map(
+      member =>
+        <div>
+          <img src={`${member.gh}.png`} alt={member.name}/>
+          <h4>{member.name}</h4>
+          <small>{member.role}</small>
+        </div>
+    )
+  }
+</section>
+
+<style>
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr;
+  gap: 1rem 2rem;
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+h2 {
+  grid-column: 1 / 5;
+  grid-row: 1 / 2;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+div {
+  display: grid;
+  grid-template-colums: auto 80px;
+  grid-template-rows: 1fr 1fr;
+  color: var(--fg-color);
+  text-align: center;
+  background-color: var(--mg-color);
+  padding: 1rem;
+  border-radius: 15px;
+  height: 80px;
+  align-items: center;
+
+  img {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  h4 {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin: 0;
+  }
+  p {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    margin: 0;
+  }
+}
+</style>

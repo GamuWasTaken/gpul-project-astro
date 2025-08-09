@@ -1,0 +1,42 @@
+
+<section>
+  <h2>A que nos dedicamos</h2>
+  <div>
+    <h3>Software libre</h3>
+    <p>Ver e reutilizar o código é fundamental para aprender, para estar seguros de ter privacidade e para mellorar o software.<p>
+  </div>
+  <div>
+    <h3>Hardware libre</h3>
+    <p>Igual que no software, no hardware tamén se poden publicar os planos e deseños para democratizar o acceso a tecnoloxía.<p>
+  </div>
+  <div>
+    <h3>Coñecemento libre</h3>
+    <p>Non nos podemos olvedar da importancia de compoartir coñecemento libremente, sen restricións, mellorando a sociedade.<p>
+  </div>
+</section>
+
+<style>
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  text-align: center;
+  gap: 0 25px;
+  padding: 0 1rem 5rem 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+h2 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  color: var(--accent-color);
+}
+
+div {
+  grid-row: 2 / 3;
+  background-color: var(--mg-color);
+  color: var(--fg-color);
+  border-radius: .5rem;
+  padding: 0 1rem;
+}
+</style>

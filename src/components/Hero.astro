@@ -1,0 +1,61 @@
+
+<header>
+    <img src="https://gpul.org/img/logo.svg"/>
+    <h1>Grupo de Programadores e <br> Usuarios de Linux</h1>
+    <p>
+      <!-- TODO: dinamic date -->
+      Defendendo o software libre dende 1998
+    </p>
+    <div>
+      <a>Wiki</a>
+      <a>Blog</a>
+    </div>
+</header>
+
+<style>
+header {
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+img {
+  height: 200px;
+  width: fit-content;
+  margin-bottom: 2rem;
+}
+
+h1, p, a {
+  color: var(--bg-color);
+  filter: contrast(200%);
+}
+
+h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+}
+
+p {
+  font-style: italic;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+a {
+  background-color: var(--fg-color);
+  padding: 10px 2.5rem;
+  margin: 0 5px;
+  border-radius: 0.4rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 200ms ease;
+  filter: brightness(1);
+}
+a:hover {
+  filter: brightness(0.9);
+}
+</style>

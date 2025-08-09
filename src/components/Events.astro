@@ -1,0 +1,99 @@
+---
+import OutlineButton from './OutlineButton.astro';
+---
+
+<section>
+  <h2>Os nosos eventos</h2>
+  <div class="hackudc">
+    <img src="https://gpul.org/assets/images/logos/logo_hackudc_black.png"/>
+    <h3>HackUDC</h3>
+    <span>Próximamente</span>
+    <p>O maior hackathon de Galicia, organizado por GPUL cada ano.</p>
+    <p>📅 Febreiro 2025</p>
+    <OutlineButton class="small">Máis info</OutlineButton>
+  </div>
+  <div class="atlanticaconf">
+    <img src="https://gpul.org/assets/images/logos/logo_atlantica_blue.png"/>
+    <h3>AtlánticaConf</h3>
+    <span>Próximamente</span>
+    <p>Conferencia de tecnoloxía e innovación do noroeste peninsular.</p>
+    <p>📅 2027</p>
+    <OutlineButton class="small">Máis info</OutlineButton>
+  </div>
+  <div class="gpulschools">
+    <img src="https://gpul.org/assets/images/logos/logo_school.png"/>
+    <h3>GPUL Schools</h3>
+    <!-- TODO: make the active class dinamic -->
+    <span class="active">Activo</span>
+    <p>Cursos e talleres sobre tecnoloxías libres e ememrzentes.</p>
+    <p>📅 Todo o ano</p>
+    <OutlineButton class="small">Máis info</OutlineButton>
+  </div>
+</section>
+
+<!-- TODO: give the section max-width: 1000px; -->
+<style>
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+  gap: .5rem 2rem;
+  background-color: var(--mg-color);
+  padding: 1rem;
+}
+
+h2 {
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  text-align: center;
+  color: var(--accent-color);
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-row: 2 / 3;
+  background-color: var(--bg-color);
+  color: var(--fg-color);
+  text-align: center;
+  border-radius: 1rem;
+  padding: .7rem;
+
+  img {
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+  }
+
+  span {
+    background-color: var(--fg-color);
+    border-radius: 5px;
+    color: var(--bg-color);
+    padding: 3px 10px;
+    font-size: .8rem;
+    font-weight: bold;
+  }
+  span.active {
+    background-color: #00A400;
+    color: white;
+  }
+
+  p:last-of-type {
+    font-weight: bold;
+  }
+}
+
+.hackudc img,
+.atlanticaconf img {
+  filter: contrast(0) brightness(10);
+}
+
+body:has(.dark_mode_toggle:checked) {
+  .hackudc img,
+  .atlanticaconf img {
+    filter: none;
+  }
+}
+</style>
+

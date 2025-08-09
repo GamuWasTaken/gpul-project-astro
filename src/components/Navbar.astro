@@ -1,0 +1,47 @@
+---
+import DarkModeToggle from './DarkModeToggle.astro';
+import Link from './Link.astro';
+---
+
+<nav>
+  <div>
+    <slot/>
+  </div>
+  <div>
+    <Link href="github.com">
+      GitHub
+    </Link>
+  </div>
+  <DarkModeToggle />
+</nav>
+
+
+<style>
+nav {
+  position: sticky;
+  will-change: transform;
+  z-index: 1;
+  top: 0;
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 15px;
+  padding: 0 20px;
+  height: 60px;
+  align-content: center;
+
+  background-color: var(--mg-color);
+
+  div {
+    display: flex;
+    gap: 30px;
+  }
+}
+
+
+button {
+  background: none;
+  border: none;
+}
+</style>
+

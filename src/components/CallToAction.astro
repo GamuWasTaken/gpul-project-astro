@@ -1,0 +1,43 @@
+---
+import SolidButton from './SolidButton.astro';
+---
+
+<section>
+  <h2>Únete á nosa comunidade</h2>
+  <p>Listo para formar parte de algo maior? Únete á nosa comunidade de entusiastas da tecnoloxía e comeza a túa viaxe connosco hoxe.</p>
+
+  <SolidButton>Comeza Agora</SolidButton>
+</section>
+
+
+<style>
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h2 {
+  color: var(--accent-color);
+  text-align: center;
+}
+p {
+  color: var(--fg-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+a {
+  text-align: center;
+  background-color: var(--fg-color);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--bg-color);
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem;
+}
+</style>

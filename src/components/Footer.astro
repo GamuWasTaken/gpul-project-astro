@@ -1,0 +1,54 @@
+---
+import Link from './Link.astro';
+---
+
+<footer>
+<div>
+  <p>Redes</p>
+  <Link href="#">Bluesky</Link>
+  <Link href="#">Instagram</Link>
+  <Link href="#">LinkedIn</Link>
+  <Link href="#">X</Link>
+</div>
+<div>
+  <p>Os nosos fregados</p>
+  <Link href="#">HackUDC</Link>
+  <Link href="#">AtlanticaConf</Link>
+  <Link href="#">GPUL Schools</Link>
+</div>
+<div>
+  <p>Contacto</p>
+  <Link href="#">Dirección</Link>
+  <Link href="#">+34 881 01 1369</Link>
+  <Link href="#">info@gpul.org</Link>
+  <Link href="#">Telegram</Link>
+</div>
+<p>Copyright © 2025 Grupo de Programadores e Usuarios de Linux.</p>
+</footer>
+
+<style>
+footer {
+  background-color: var(--mg-color);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  color: var(--fg-color);
+  padding: 1rem 3rem;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+
+    p {
+      font-weight: bold;
+    }
+  }
+
+  >p {
+    grid-column: 1/4;
+    text-align: center;
+  }
+}
+</style>
